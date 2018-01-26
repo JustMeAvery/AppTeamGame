@@ -9,7 +9,7 @@ class sword(weapon):
 
 class dagger(sword):
 	def __init__(self):
-		self.damage = 
+		self.damage = 5
 		self.durability = 50
 		self.speed = 7
 		self.dtype = "stab"
@@ -84,6 +84,27 @@ class spiky_poisoned_wooden_club(club):
 		self.durability = 70
 		self.speed = 6
 		self.dtype = "whack, wound, poison the wound, and temporarily stun the enemy/ies (they die fster with the poison)"
+		
+class metal_club(club):
+	def __init__(self):
+		self.damage = 20
+		self.durability = 70
+		self.speed = 6
+		self.dtype = "whack and temporarily stun the enemy/ies (longer than the wooden club)"
+		
+class spiky_metal_club(metal_club):
+	def __init__(self):
+		self.damage = 25
+		self.durability = 80
+		self.speed = 5.5
+		self.dtype = "whack, wound, and temporarily stunt the enemy/ies (longer than the wooden club)"
+		
+class spiky_poisoned_metal_club(metal_club):
+	def __init__(self):
+		self.damage = 30
+		self.durability = 90
+		self.speed = 5
+		self.dtype = "whack, wound, poison the wound, and temporarily stunt the enemy/ies (longer than the wodden club)"
 
 
 class blaster(weapon):
