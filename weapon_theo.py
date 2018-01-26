@@ -9,42 +9,81 @@ class sword(weapon):
 
 class dagger(sword):
 	def __init__(self):
-		self.damage = 5
+		self.damage = 
 		self.durability = 50
-		self.speed = 6
+		self.speed = 7
 		self.dtype = "stab"
-
+		
+		
+class rusty_dagger(dagger):
+	def __init__(self):
+		self.damage = 10
+		self.durability = 60
+		self.speed = 6.5
+		self.dtype = "stab and infect wound (enemies die faster)"
+	
+		
+		
+		
+class poisoned_dagger(dagger):
+	def __init__(self):
+		self.damage = 15
+		self.durability = 70
+		self.speed = 6
+		self.dtype = "stab and poison enemy wound (enemies die even faster)"
+		
+		
+		
 class medieval_sword(sword)
 	def __init__(self):
-		self.damage = 5
-		self.durability = 50
+		self.damage = 20
+		self.durability = 70
 		self.speed = 6
-		self.dtype = "slice"
+		self.dtype = "cut"
 
 class rusty_medieval_sword(medieval_sword):
 	def __init__(self):
-		self.damage = 5
-		self.durability = 50
-		self.speed = 6
-		self.dtype = "cut and infect (enemies die faster)"
+		self.damage = 25
+		self.durability = 80
+		self.speed = 5.5
+		self.dtype = "cut and infect wound (enemies die faster)"
+
+class poisoned_medieval_sword(medieval_sword):
+	def __init__(self):
+		self.damage = 30
+		self.durability = 90
+		self.speed = 5
+		self.dtype = "cut and poison (enemies even die faster)"
 
 
 
 class club(weapon):
+	def __init__(self):
+		self.damage = 5
+		self.durability = 50
+		self.speed = 6
+		self.dtype = "TBD"
 
+class wooden_club(club):
+	def __init__(self):
+		self.damage = 5
+		self.durbaility = 50
+		self.speed = 7
+		self.dtype = "whack and temporarily stun the enemy/ies"
+		
+class spiky_wooden_club(club):
+	def __init__(self):
+		self.damage = 10
+		self.durability = 60
+		self.speed = 6.5
+		self.dtype = "whack, wound, and temporarily stun the enemy/ies"
 
-
-
-
-
-
-
-
-
-
-
-
-
+class spiky_poisoned_wooden_club(club):
+	def __init__(self):
+		self.damage = 15
+		self.durability = 70
+		self.speed = 6
+		self.dtype = "whack, wound, poison the wound, and temporarily stun the enemy/ies (they die fster with the poison)"
 
 
 class blaster(weapon):
