@@ -21,7 +21,12 @@ class medieval_sword(sword)
 		self.speed = 6
 		self.dtype = "slice"
 
-class rusty_medieval_sword(medieval_sword)
+class rusty_medieval_sword(medieval_sword):
+	def __init__(self):
+		self.damage = 5
+		self.durability = 50
+		self.speed = 6
+		self.dtype = "cut and infect (enemies die faster)"
 
 
 
