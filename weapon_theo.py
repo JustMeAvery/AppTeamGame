@@ -108,13 +108,53 @@ class spiky_poisoned_metal_club(metal_club):
 
 
 class blaster(weapon):
+	def __init__(self):
+		self.damage = 5
+		self.durability = 50
+		self.speed = 6
+		self.dtype = "TBD"
+		
+class average_blaster(blaster):
+	def __init__(self):
+		self.damage = 5
+		self.durability = 50
+		self.speed = 7
+		self.dtype = "blasts and temorarily stuns enemies"
 
+class supa_average_blaster(average_blaster):
+	def __init__(self):
+		self.damage = 10
+		self.durability = 60
+		self.speed = 6.5
+		self.dtype = "blasts and temorarily stuns enemies"
 
+class supa_mega_average_blaster(average_blaster):
+	def __init__(self):
+		self.damage = 15
+		self.durability = 70
+		self.speed = 6
+		self.dtype = "blasts and temorarily stuns enemies"
 
+class awesome_blaster(blaster):
+	def __init__(self):
+		self.damage = 20
+		self.durability = 70
+		self.speed = 6
+		self.dtype = "blasts and temorarily stuns enemies (for longer than the average blaster)"
 
-
-
-
+class supa_awesome_blaster(awesome_blaster):
+	def __init__(self):
+		self.damage = 25
+		self.durability = 80
+		self.speed = 5.5
+		self.dtype = "blasts and temorarily stuns enemies (for longer than the average blaster)"
+	
+class supa_mega_awesome_blaster(awesome_blaster):
+	def __init__(self):
+		self.damage = 30
+		self.durability = 90
+		self.speed = 5
+		self.dtype = "blasts and temporarily stuns enemies (for longer than the average blaster)"
 
 
 
