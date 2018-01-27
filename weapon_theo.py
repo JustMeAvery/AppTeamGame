@@ -156,54 +156,59 @@ class supa_mega_awesome_blaster(awesome_blaster):
 		self.speed = 5
 		self.dtype = "blasts and temporarily stuns enemies (for longer than the average blaster)"
 
-class bow(weapon):
+
+		
+		
+class bow_and_arrow(weapon):
 	def __init__(self):
 		self.damage = 5
 		self.durability = 50
 		self.speed = 6
-		self.dtype = "TBD"
+		self.dtype = "whatever the bows do"
 		
-class average_bow(bow):
+class average_bow_and_sharp_arrow(bow_and_arrow):
 	def __init__(self):
 		self.damage = 5
 		self.durability = 50
 		self.speed = 7
-		self.dtype = "shoot and wound enemies"
+		self.dytpe = "whatever the bows do"
 		
-class supa_average_bow(average_bow):
+class supa_average_bow_and_supa_sharp_arrow(average_bow_and_sharp_arrow):
 	def __init__(self):
 		self.damage = 10
 		self.durability = 60
 		self.speed = 6.5
-		self.dtype = "shoot and wound enemies"
+		self.dtype = "whatever the bows do"
 		
-class supa_mega_average_bow(average_bow):
+class supa_mega_average_bow_and_supa_mega_sharp_arrow(average_bow_and_sharp_arrow):
 	def __init__(self):
 		self.damage = 15
 		self.durability = 70
 		self.speed = 6
-		self.dtype = "shoot and wound enemies"
+		self.dtype = "whatever the bows do"
 		
-class awesome_bow(bow):
+class awesome_bow_and_poisoned_arrow(bow_and_arrow):
 	def __init__(self):
 		self.damage = 20
 		self.durability = 70
 		self.speed = 6
-		self.dtype = "shoot and wound the enemies (more damage than the average bow)"
+		self.dtype = "whatever the bows do only better and poisonous"
 		
-class supa_awesome_bow(awesome_bow):
+class supa_awesome_bow_and_supa_poisoned_arrow(awesome_bow_and_poisoned_arrow):
 	def __init__(self):
 		self.damage = 25
 		self.durability = 80
 		self.speed = 5.5
-		self.dtype = "shoot and wound the enemies (more damage than the average bow)"
+		self.dtype = "whatever the bows do only better and poisonous"
 		
-class supa_mega_awesome_bow(awesome_bow):
+class supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow(awesome_bow_and_arrow):
 	def __init__(self):
-		self.damage = 30
+		self.damage. = 30
 		self.durability = 90
 		self.speed = 5
-		self.dtype = "shoot and wound the enemies (more damage than the average bow)"
+		self.dtype = "whatever the bows do only better and poisonous"
+		
+
 
 
 
