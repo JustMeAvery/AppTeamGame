@@ -1,4 +1,6 @@
 class weapon():
+	def get_attack(self):
+		return self.damage
 
 class sword(weapon):
 	def __init__(self):
@@ -34,7 +36,7 @@ class poisoned_dagger(dagger):
 		
 		
 		
-class medieval_sword(sword)
+class medieval_sword(sword):
 	def __init__(self):
 		self.damage = 20
 		self.durability = 70
@@ -201,17 +203,22 @@ class supa_awesome_bow_and_supa_poisoned_arrow(awesome_bow_and_poisoned_arrow):
 		self.speed = 5.5
 		self.dtype = "whatever the bows do only better and poisonous"
 		
-class supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow(awesome_bow_and_arrow):
+class supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow(awesome_bow_and_poisoned_arrow):
 	def __init__(self):
-		self.damage. = 30
+		self.damage = 30
 		self.durability = 90
 		self.speed = 5
 		self.dtype = "whatever the bows do only better and poisonous"
 		
 
+#what the heck how do i write test code kevin?????!!!!!!!!!
 
 
-
+w = supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow()
+print(w.damage)
+print(w.speed)
+print(w.durability)
+print(w.dtype)
 
 
 
