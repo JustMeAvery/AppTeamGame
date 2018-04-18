@@ -1,19 +1,26 @@
+from theo_armor import *
+from weapon_theo import *
 class character():
-	def __init__(self, name, species, armor):
+	def __init__(self, name, species):
 		self.hp = 500
-		self.items = ""
+		self.inventory = []
 		self.name = name
-		self.weapon = "dagger"
+		self.weapon = dagger()
 		self.species = species
-		self.armor = armor
-		
-name = raw_input("What is your character's name?")
-species = raw_input("What species of living thing R U?")
-print ("Since U R A noob, U will start with this dagger ;). Deal with it.")
+		self.helm = None
+		self.chest_armor = None
+		self.leg_armor = None
+		self.shield = shield()
 
-theo = character(name, species, "breastplate, helm,")
-print (theo.name)
-print (theo.weapon)
-print (theo.species)
-print (theo.armor)
+	def take_damage(self, damage):
+		num_armor = sum([armor != None for armor in [self.helm, self.chest_armor, self.leg_armor, self.shield]])
+		#TODO
 
+def new_game():
+	name = input("Enter your name.\n")
+	response = input("Is " + name + " your name? (Type 'y' or 'n' only.)\n")
+	if response.lower() == "y":
+		species = input("What species of living thing R U?\n")
+		response = input("So U R A " + species + "?\n")
+		if response.lower() == "y":
+			return character(name, species)
