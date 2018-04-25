@@ -211,22 +211,6 @@ class supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow(awesome_bow_and
 		self.dtype = "whatever the bows do only better and poisonous"
 		
 
-#what the heck how do i write test code kevin?????!!!!!!!!!
-
-
-w = supa_mega_awesome_bow_and_supa_mega_awesome_poisoned_arrow()
-print(w.damage)
-print(w.speed)
-print(w.durability)
-print(w.dtype)
-
-
-
-
-
-
-
-
 
 
 

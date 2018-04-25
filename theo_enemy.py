@@ -1,4 +1,9 @@
 class enemy:
+    def get_attack(self):
+        return "slash"
+
+    def take_damage(self, damage):
+        self.hp = self.hp - damage
 
 class dragon(enemy):
     def __init__(self):

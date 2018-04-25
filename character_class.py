@@ -12,15 +12,47 @@ class character():
 		self.leg_armor = None
 		self.shield = shield()
 
+	def cba(self):
+		if self.helm and self.helm.dur == 0:
+			self.helm = None
+		if self.chest_armor and self.chest_armor.dur == 0:
+			self.chest_armor = None
+		if self.leg_armor and self.leg_armor.dur == 0:
+			self.leg_armor = None
+		if self.shield and self.shield.dur == 0:
+			self.shield = None
+		
+
 	def take_damage(self, damage):
-		num_armor = sum([armor != None for armor in [self.helm, self.chest_armor, self.leg_armor, self.shield]])
-		#TODO
+		while damage > 0:
+			armor_pieces = [armor != None for armor in [self.helm, self.chest_armor, self.leg_armor, self.shield]]		
+			num_armor = sum(armor_pieces)
+			split_dmg = damage/num_armor
+			for armor in armor_pieces:
+				if armor.dur >= split_dmg:
+					armor.dur -= split_dmg
+					damage -= split_dmg
+				else:
+					damage -= armor.dur
+					armor.dur = 0
+			self.cba()
+	
+
+	def get_attack(self):
+		while True:
+			attack = input("How would U like 2 attack UR enemy? Stab, slash, or crush? [type either 'slash', 'stab', or 'crush']\n")
+			if not attack in ["slash", "stab", "crush"]:
+				print ("brosseff that was not a valid ansuh")
+			else:
+				return attack
+
 
 def new_game():
-	name = input("Enter your name.\n")
-	response = input("Is " + name + " your name? (Type 'y' or 'n' only.)\n")
-	if response.lower() == "y":
-		species = input("What species of living thing R U?\n")
-		response = input("So U R A " + species + "?\n")
+	while True:
+		name = input("Enter your name.\n")
+		response = input("Is " + name + " your name? (Type 'y' or 'n' only.)\n")
 		if response.lower() == "y":
-			return character(name, species)
+			species = input("What species of living thing R U?\n")
+			response = input("So U R A " + species + "?\n")
+			if response.lower() == "y":
+				return character(name, species)
