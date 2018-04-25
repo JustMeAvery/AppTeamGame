@@ -6,9 +6,9 @@ attack_type_multipliers = {"stab": 0.75, "slash": 1.0, "crush": 1.5}
 def battle_loop(player, enemy):
 	# battle info
 	# TODO: add context to the prints
-	print (enemy)
-	print (enemy.hp)
-	print (enemy.weapon)
+	print("You see a/an " + enemy)
+	print("It has " + enemy.hp)
+	print("Its weapon is a/an " + enemy.weapon)
 
 	participants = [player, enemy]
 	# loop until u win/lose
