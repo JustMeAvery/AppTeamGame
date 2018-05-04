@@ -4,13 +4,13 @@ from weapon_theo import *
 xp_req_by_lvl = {	1:0,
 				 	2:100,
 				 	3:500,
-				 	4:__
+				 	4:
 				 	}
 
 class character():
 	def __init__(self, name, species):
-		self.maxhp = 500
-		self.hp = 500
+		self.maxhp = 100
+		self.hp = 100
 		self.inventory = []
 		self.name = name
 		self.weapon = dagger()
@@ -27,7 +27,7 @@ class character():
 
 	def levelup(self):
 		# TODO: fill this in with a check whether you should level up then do it if the check is True
-		pass
+		
 
 
 	def cba(self):
