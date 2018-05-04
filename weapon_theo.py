@@ -15,6 +15,8 @@ class dagger(sword):
 		self.durability = 50
 		self.speed = 7
 		self.dtype = "stab"
+	def __repr__(self):
+		return "dagger"
 		
 		
 class rusty_dagger(dagger):

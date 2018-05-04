@@ -1,7 +1,15 @@
 from theo_armor import *
 from weapon_theo import *
+
+xp_req_by_lvl = {	1:0,
+				 	2:100,
+				 	3:500,
+				 	4:__
+				 	}
+
 class character():
 	def __init__(self, name, species):
+		self.maxhp = 500
 		self.hp = 500
 		self.inventory = []
 		self.name = name
@@ -11,6 +19,16 @@ class character():
 		self.chest_armor = None
 		self.leg_armor = None
 		self.shield = shield()
+		self.xp = 0
+		self.level = 1
+
+	def __repr__(self):
+		return self.name + ", the " + self.species
+
+	def levelup(self):
+		# TODO: fill this in with a check whether you should level up then do it if the check is True
+		pass
+
 
 	def cba(self):
 		if self.helm and self.helm.dur == 0:
@@ -25,8 +43,8 @@ class character():
 
 	def take_damage(self, damage):
 		while damage > 0:
-			armor_pieces = [armor != None for armor in [self.helm, self.chest_armor, self.leg_armor, self.shield]]		
-			num_armor = sum(armor_pieces)
+			armor_pieces = [armor for armor in [self.helm, self.chest_armor, self.leg_armor, self.shield] if armor != None]		
+			num_armor = len(armor_pieces)
 			split_dmg = damage/num_armor
 			for armor in armor_pieces:
 				if armor.dur >= split_dmg:

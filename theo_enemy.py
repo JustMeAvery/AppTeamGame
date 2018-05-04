@@ -1,3 +1,4 @@
+from weapon_theo import *
 class enemy:
     def get_attack(self):
         return "slash"
@@ -8,7 +9,7 @@ class enemy:
 class dragon(enemy):
     def __init__(self):
         self.hp = 500
-        self.weapon = "dagger"
+        self.weapon = dagger()
         self.abilities = "can breathe fire and dodge attacks by flying out of the way."
     def __repr__(self):
         return "dragon"
